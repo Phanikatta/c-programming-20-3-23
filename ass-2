@@ -1,0 +1,21 @@
+//To print sum of n even numbers using recursive function
+#include<stdio.h>
+int evensum(int);
+int main()
+{
+	int n,s;
+	scanf("%d",&n);
+	if(n%2==0)
+	s=evensum(n);
+	else
+	s=evensum(n-1);
+	printf("Even Sum=%d",s);
+}
+int evensum(int n)
+{
+	if(n==2)
+	return 2;
+	else if(n%2==0)
+	return n+evensum(n-2);
+	
+}
